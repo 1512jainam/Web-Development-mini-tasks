@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+
+    <div ><button id="b1" onClick="myFunc2()" >🔆</button> <button id="b2" onClick="myFunc1()">☀ </button> </div>    
+    <br>
+    <div id="t">TRAFIIC LIGHT</div>
+    <div id="j">
+        <div id="r"></div>
+        <div id="o"></div>
+        <div id="g"></div>
+    </div>
+    
+<script>
+        function changecolor(color){
+            document.body.style.background=color;
+        }
+        function myFunc1(){changecolor('Black');}
+        function myFunc2(){changecolor('white');}
+    </script>
+
+</body>
+</html>

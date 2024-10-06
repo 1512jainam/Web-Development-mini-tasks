@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List with Vue.js</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1>Todo List</h1>
+      <ul class="list">
+        <li v-for="item in items" :key="item.id" :class="{ 'removed': item.removed }">
+          <input type="checkbox" v-model="item.completed" alt="true" /> 
+          <span :style="{ 'text-decoration': item.removed ? 'line-through' : 'none' }">{{ item.text }}</span>
+          <button @click="removeItem(item.id)">Remove</button>
+        </li>
+      </ul>
+      <div class="button-container">
+        <input type="text" v-model="newItemText" placeholder="Add New Item" />
+        <button @click="addItem">Add New Item</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        newItemText: "",
+        items: [
+          { id: 1, text: "Item 1", completed: false, removed: false },
+          { id: 2, text: "Item 2", completed: false, removed: false },
+          { id: 3, text: "Item 3", completed: false, removed: false },
+          { id: 4, text: "Item 4", completed: false, removed: false },
+        ],
+      },
+      methods: {
+        addItem: function () {
+          if (this.newItemText.trim() !== "") {
+            this.items.push({
+              id: this.items.length + 1,
+              text: this.newItemText,
+              completed: false,
+              removed: false,
+            });
+            this.newItemText = "";
+          }
+        },
+        removeItem: function (itemId) {
+          const index = this.items.findIndex(item => item.id === itemId);
+          if (index !== -1) {
+            this.$set(this.items[index], 'removed', true);
+          }
+        },
+      },
+    });
+  </script>
+</body>
+</html>

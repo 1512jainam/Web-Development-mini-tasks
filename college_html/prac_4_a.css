@@ -1,0 +1,52 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    background-image: url("https://imgs.search.brave.com/wj07fNbLXAasJCmXjaKnC0923iF6zWcZEs6SQ5q1JxA/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDkz/MTE0NzkyL3Bob3Rv/L21hcC1vZi1pbmRp/YS5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9V1pWM2hMMW1Z/cWxtNzdmcEtrb19y/RTB6ZTd2eWR1VWdC/bDFycDVXRUhmWT0");
+    width: 100vw; 
+    height:100vh;
+    position: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.main-content {
+    text-align: center;
+    padding: 20px;
+}
+
+    button {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #00567A;
+}
+
+#locationResult {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

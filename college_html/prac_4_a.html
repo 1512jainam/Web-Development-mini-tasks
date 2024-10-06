@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geolocation</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("img/M.jpg");
+      background-size: cover;
+      font-family: 'Poppins', sans-serif;
+      color: rgb(213, 213, 213)
+    }
+
+    h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #b{
+      background-color: antiquewhite;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      border-radius: 10px;
+    }
+    #location-info {
+      display: none;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    strong {
+      color: #ff8c00;
+    }
+
+    #latitude,#longitude {
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Find Your Geolocation <button id="b" style="background-color: #8df8d6; border: none; " onclick="show()"> FIND </button></h1>
+  <div id="location-info"> <strong>Latitude:</strong> <span id="latitude"></span><br /> <strong>Longitude:</strong>
+    <span id="longitude"></span> </div>
+  <script src="prac_4a.js"></script>
+</body>
+
+</html>

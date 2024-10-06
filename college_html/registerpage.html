@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 flex flex-col items-center justify-center min-h-screen">
+    <!-- Header with Logo -->
+    <header class="w-full py-4 px-8 bg-gray-900 flex items-center justify-start">
+        <div class="flex items-center">
+            <img src="https://via.placeholder.com/40" alt="Logo" class="w-10 h-10 mr-2">
+            <h1 class="text-white font-bold text-lg">Logo</h1>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="bg-gray-900 text-white flex w-full max-w-screen-lg max-h-[80vh] mx-auto rounded-lg shadow-lg overflow-hidden mt-5 mb-5">
+        <!-- Left Section -->
+        <div class="w-1/2 p-10 flex flex-col justify-center">
+            <h2 class="text-4xl font-semibold mb-4">Register</h2>
+            <p class="text-gray-400 mb-6">Create your account to join the community!</p>
+            <button class="flex items-center justify-center w-full bg-white text-black rounded-lg py-2 mb-4">
+                <img src="https://www.google.com/favicon.ico" alt="Google Logo" class="w-5 h-5 mr-2"> Sign up with Google
+            </button>
+            <form>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-400 mb-2">Email*</label>
+                    <input type="email" id="email" placeholder="mail@website.com" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:border-purple-500 border border-gray-600">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-400 mb-2">Password*</label>
+                    <input type="password" id="password" placeholder="Min. 8 characters" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:border-purple-500 border border-gray-600">
+                </div>
+                <div class="mb-6">
+                    <label for="confirm-password" class="block text-gray-400 mb-2">Confirm Password*</label>
+                    <input type="password" id="confirm-password" placeholder="Re-enter your password" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:border-purple-500 border border-gray-600">
+                </div>
+                <button type="submit" class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors duration-300">Register</button>
+            </form>
+            <div class="mt-6">
+                <p class="text-gray-400 mb-2 text-center">Login/Signup as:</p>
+                <div class="flex flex-col space-y-2">
+                    <button class="bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 transition duration-300">Institution</button>
+                    <button class="bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 transition duration-300">Student</button>
+                    <button class="bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 transition duration-300">Alumni</button>
+                </div>
+            </div>
+            <p class="mt-4 text-center text-gray-400">Already registered? 
+                <a href="login.html" class="text-purple-500 hover:underline">Login here</a>
+            </p>
+            <p class="mt-2 text-xs text-gray-500 text-center">&copy; 2024 Erdem All rights reserved</p>
+        </div>
+
+        <!-- Right Section with Image -->
+        <div class="w-1/2 bg-gray-800 flex items-center justify-center">
+            <img src="https://images.pexels.com/photos/27926122/pexels-photo-27926122/free-photo-of-white-sand-desert.jpeg" alt="Dummy Image" class="w-full h-full object-cover">
+        </div>
+    </div>
+</body>
+</html>

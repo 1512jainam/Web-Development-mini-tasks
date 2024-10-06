@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Tailwind CSS Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-gray-100 to-gray-600" onmouseover="changeBackgroundColor('red')" onmouseout="changeBackgroundColor('#F9FAFB')">
+
+  <div class="container mx-auto p-3 ">
+    <h1 class="text-4x1 font-bold text-center text-blue-700">Welcome to My Tailwind CSS Example</h1>
+    <p class="mt-4 text-lg text-gray-900 flex justify-center">This is a basic example demonstrating the usage of Tailwind CSS.</p>
+    <div class="mt-5 flex justify-center">
+      <a href="https://tailwindcss.com/docs" class="relative">
+        <button class="px-4 py-2 mb-3 bg-green-400 text-white font-semibold rounded hover:bg-yellow-600 lg:bg-blue-700 lg:text-white transform transition duration-300 ease-in-out hover:scale-110">Go to Tailwind CSS Docs</button>
+      </a>
+    </div>
+    <div class="relative flex justify-center">
+      <img src="img/b.jpg" class="rounded-xl">
+      <div class="absolute inset-0 flex justify-center items-center text-white font-bold text-xl">
+        <p class="hover:text-green-400">Hover me </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script>
+    function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script> -->
+</body>
+</html>

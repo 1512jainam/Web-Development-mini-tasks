@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Symptoms - Health Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="track-symptoms.html">Track Symptoms</a></li>
+                <li><a href="health-tips.html">Health Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+ 
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="track-symptoms">
+            <h1>Track Your Symptoms</h1>
+            <form>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="symptoms">Symptoms:</label>
+                <textarea id="symptoms" name="symptoms" required></textarea>
+                
+                <label for="severity">Severity (1-10):</label>
+                <input type="number" id="severity" name="severity" min="1" max="10" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Health Tracker</p>
+    </footer>
+    <script src="date.js"></script>
+    <script src="symptom.js"></script>
+    <script src="confirmation.js"></script>
+    <script src="navigation.js"></script>
+    <!-- <script src="local_storage.js"></script> -->
+    <script src="health_tip_generation.js"></script>
+</body> 
+</html>

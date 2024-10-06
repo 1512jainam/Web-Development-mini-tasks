@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tailwind CSS Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+</head>
+<body style="background-image: url('img/p4.jpg') ; background-repeat: no-repeat; height:100%; width: 100%; background-size: cover;" >
+  <div class="w-full my-10 flex justify-center items-center h-full">
+    <div class="bg-gray-600 w-[90%] md:w-[50%] lg:w-[35%] rounded-xl p-10 ">
+      <form id="bookForm">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="self-center text-3xl font-bold ">Enter The Book Details</div>
+          <div class="flex flex-col gap-1 justify-center ">
+            <label class="font-medium"> 
+              Book Title: <sup class="text-red-700 text-sm">*</sup>
+            </label>
+            <input
+              type="text"
+              id="title"
+              placeholder="Enter Title"
+              class="p-2 rounded-lg bg-gray-300 outline-blue-400"
+              required
+            />
+          </div>
+          <div class="flex flex-col gap-1 justify-center ">
+            <label class="font-medium">
+              Author Name: <sup class="text-red-700 text-sm">*</sup>
+            </label>
+            <input
+              type="text"
+              id="author"
+              placeholder="Enter Author Name"
+              class="p-2 rounded-lg bg-gray-300 outline-blue-400"
+              pattern="[A-Za-z ]+"
+              title="Please enter only alphabets"
+              required
+            />
+          </div>
+          <div class="flex flex-col gap-1 justify-center ">
+            <label class="font-medium">
+              Publisher Name: <sup class="text-red-700 text-sm">*</sup>
+            </label>
+            <input
+              type="text"
+              id="publisher"
+              placeholder="Enter Publisher Name"
+              class="p-2 rounded-lg bg-gray-300 outline-blue-400"
+              pattern="[A-Za-z ]+"
+              title="Please enter only alphabets"
+              required
+            />
+          </div>
+          <div class="flex flex-col gap-1 justify-center ">
+            <label class="font-medium">
+              Publishing Date: <sup class="text-red-700 text-sm">*</sup>
+            </label>
+            <input
+              type="text"
+              id="publishingDate"
+              placeholder="Select Publishing Date"
+              class="p-2 rounded-lg bg-gray-300 outline-blue-400"
+              required
+              data-input
+            />
+          </div>
+          <div class="flex flex-col gap-1 justify-center ">
+            <label class="font-medium">
+              Quantity: <sup class="text-red-700 text-sm">*</sup>
+            </label>
+            <input
+              type="number"
+              id="quantity"
+              placeholder="Enter Quantity"
+              class="p-2 rounded-lg bg-gray-300 outline-blue-400"
+              required
+            />
+          </div>
+          <div class="flex flex-col gap-1 justify-center ">
+            <label class="font-medium">
+              Genre: <sup class="text-red-700 text-sm">*</sup>
+            </label>
+            <select id="genre" class="p-2 rounded-lg bg-gray-300 outline-blue-400" required>
+              <option value="">Select Genre</option>
+              <option value="fiction">Fiction</option>
+              <option value="non-fiction">Non-Fiction</option>
+            </select>
+          </div>
+          <div class="flex flex-row gap-1 justify-centeru  ">
+            <label class="font-medium">
+              Premium: <sup class="text-red-700 text-sm">*</sup>
+            </label>
+            <input type="checkbox" id="premium" value="Premium" class="mr-2" required>
+          </div>
+          <div class="flex flex-col gap-2">
+            <button
+              type="submit"
+              id="submitButton"
+              class="hover:opacity-70 justify-stretch bg-gradient-to-r from-green-400 to-blue-300 p-1 py-2 rounded-lg text-white font-medium"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    flatpickr("[data-input]", {
+      dateFormat: "Y-m-d",
+    });
+
+    document.getElementById('bookForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      var inputs = document.querySelectorAll('input[required], select[required]');
+      var valid = true;
+      inputs.forEach(function(input) {
+        if (!input.value) {
+          valid = false;
+        }
+      });
+      if (!valid) {
+        alert('Please fill in all required fields.');
+      } else {
+        var formData = {
+          title: document.getElementById('title').value,
+          author: document.getElementById('author').value,
+          publisher: document.getElementById('publisher').value,
+          publishingDate: document.getElementById('publishingDate').value,
+          quantity: document.getElementById('quantity').value,
+          genre: document.getElementById('genre').value,
+          premium: document.getElementById('premium').checked ? "Yes" : "No"
+        };
+        var jsonData = JSON.stringify(formData, null, 2);
+        
+        var blob = new Blob([jsonData], { type: 'application/json' });
+        
+        // Create a link element to download the JSON file
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'book_details.json';
+        
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+    });
+  </script>
+</body>
+</html>

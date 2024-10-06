@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    <h2>Change Images Depending on Browser Width</h2>
+    <p>Resize the browser width and the image will change at 600px and 1500px.</p>
+    <picture>
+        <source srcset="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" media="(max-width: 50px)">(Change image)
+        <source srcset="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg" media="(max-width: 100px)">(Change image)
+        <source srcset="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg"> <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg" alt="Flowers" style="width:auto;">
+    </picture>
+</body>
+
+</html>

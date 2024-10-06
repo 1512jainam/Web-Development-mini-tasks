@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="track-symptoms.html">Track Symptoms</a></li>
+                <li><a href="health-tips.html">Health Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="welcome">
+        <section class="hero">
+            <h1>Welcome to Health Tracker</h1>
+            <p>Your daily companion for tracking health and wellness.</p>
+            <a href="about.html" class="btn">Learn More</a>
+        </section>
+        <section class="features">
+            <div class="feature">
+                <h2>Track Symptoms</h2>
+                <p>Keep a detailed log of your symptoms and monitor your health over time.</p>
+            </div>
+            <div class="feature">
+                <h2>Health Tips</h2>
+                <p>Get personalized health tips based on your symptoms and health data.</p>
+            </div>
+            <div class="feature">
+                <h2>Contact Professionals</h2>
+                <p>Reach out to healthcare professionals for advice and support.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Health Tracker</p>
+    </footer>
+    
+    <!-- Chatbot HTML Structure -->
+    <div id="chatbot">
+        <div id="chatbotHeader">Chatbot</div>
+        <div id="chatbotMessages"></div>
+        <input type="text" id="chatbotInput" placeholder="Type a message..." />
+        <button id="chatbotSend">Send</button>
+    </div>
+
+    <!-- Scripts should be placed after the HTML content -->
+    <script src="greeting.js"></script>
+    <script src="navigation.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

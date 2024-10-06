@@ -1,0 +1,11 @@
+body{
+    background:linear-gradient(to right,rgb(101, 193, 249),rgb(203, 199, 199));
+}
+
+header{
+    background-color: bisque;
+    /* align-items: "center";  */
+    text-align: center;   
+}
+
+        

@@ -1,0 +1,32 @@
+.loader{
+    margin-top: 200px;
+    margin-left: 200px;
+    background-color:rgb(196, 193, 193);
+     width:200px;
+     height: 200px;
+     border-radius: 50%;
+     border-top: 20px solid rgb(15, 211, 136);
+     border-bottom: 20px solid rgb(15, 211, 136);
+     animation-name: loader1;
+     /* animation-duration: 0.5s; */
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+}
+
+/* .one{
+    margin-top: 180px;
+    margin-left: 170px;
+} */
+
+.e{
+    margin-top: 88px;
+    margin-left: 90px;
+}
+@keyframes loader1{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) ;
+    }
+}

@@ -1,0 +1,121 @@
+#t{
+    margin-left: 230px;
+    color: rgb(23, 10, 208);
+    /* border:2px dotted black; */
+    font-size: larger;
+    font-weight: 900;
+
+}
+
+#t:hover{
+    color: rgb(80, 251, 194);
+    transition-duration: 2s;
+}
+
+#j{
+    height:500px;
+    width:200px;
+    background-color: rgb(61, 61, 70);
+    color:rgb(5, 67, 121);
+    border-width: 2px;
+    border-style: solid;
+    margin-left: 200px;
+    margin-top: 50px;
+    
+}
+
+/* #j:hover{ 
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    transform: scale(0.5) rotate(360deg) translateX(100px) ; 
+    /* transform: skew(45deg);  */
+ /* }  */
+
+
+#r{
+    height:100px;
+    width: 100px;
+    background-color:red ;
+    margin-top: 50px;
+    margin-left:50px;
+    border-radius: 50%;
+
+    animation-name: coloranimate;
+    animation-duration: 0.5s;
+    animation-iteration-count: 3;
+}
+
+#r:hover{
+    background-color: rgb(247, 113, 113);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function:ease-in;
+}
+
+
+#o{
+    height:100px;
+    width: 100px;
+    background-color:orange ;
+    margin-top: 50px;
+    margin-left:50px;
+    border-radius: 50%;
+
+    animation-name: coloranimate1;
+    animation-duration: 0.5s;
+    animation-iteration-count: 3;
+}
+
+#o:hover{
+    background-color: rgb(235, 245, 102);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function:ease-in;
+}
+
+#g{
+    height:100px;
+    width: 100px;
+    background-color:rgb(0, 128, 0) ;
+    margin-top: 50px;
+    margin-left:50px;
+    border-radius: 50%;
+
+    animation-name: coloranimate2;
+    animation-duration: 0.5s;
+    animation-iteration-count: 3;
+}
+
+#g:hover{
+    background-color: rgb(172, 255, 127);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function:ease-in;
+}
+
+#b1{
+    margin-top: 20px;
+    color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+#b2{
+    margin-top: 20px;
+    color:rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+@keyframes coloranimate{
+    to{background-color: rgb(121, 4, 48);}
+}
+
+ @keyframes coloranimate1{
+    to{background-color: rgb(147, 137, 2);}
+}
+
+@keyframes coloranimate2{
+    to{background-color: rgb(6, 176, 40);}
+} 
+

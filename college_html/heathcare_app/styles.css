@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f0f2f5;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    animation: navFadeIn 1s ease-in-out;
+}
+
+@keyframes navFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+    background-image: url("i2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.welcome, .track-symptoms, .health-tips, .contact, .login, .register {
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.welcome:hover, .track-symptoms:hover, .health-tips:hover, .contact:hover, .login:hover, .register:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #2193b0;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+p, ul li {
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: 700;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    box-shadow: 0 0 10px rgba(33, 147, 176, 0.5);
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #2193b0;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s, transform 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+form button:hover {
+    background: #6dd5ed;
+    transform: scale(1.1);
+}
+
+footer {
+    background: #2193b0;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.contact, .track-symptoms, .login, .register {
+    background-image: url("i4.jpg");
+    background-repeat: no-repeat;
+    background-size: 130%;
+}
+
+.health-tips {
+    background-image: url("i5.avif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    form input, form textarea {
+        width: 90%;
+    }
+
+    .welcome, .track-symptoms, .health-tips, .contact, .login, .register {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 300px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#chatbotHeader {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#chatbotMessages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chatbotInput {
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 80%;
+}
+
+#chatbotSend {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+

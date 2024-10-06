@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <style>
+        body{
+            background-color: rgb(76, 152, 234);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(13, 11, 11);
+        }
+        .comp{
+            text-decoration: line-through;
+        }
+        .text{
+            color: rgb(8, 1, 24);
+        }
+        .inp{
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text">Todo List <hr color="black"></h1>
+    <div>
+        <input type="text" placeholder="Add New Task" id="input" class="inp">
+        <button id="btn" class="btt">Add</button>
+    </div>
+        <ul id="unoreder_list">
+            <li id="liId" ></li>
+        </ul>
+    <script src ="prac_4_D.js"></script>
+</body>
+</html>

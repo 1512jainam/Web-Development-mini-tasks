@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Converter</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #60f88e, #6ddafe, #90f11a);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    #app {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="date"] {
+      width: 200px;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #34a109;
+      color: #fff;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #12b300;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <input type="date" v-model="dateInput" />
+    <button @click="convertDate">Convert</button>
+    <p v-if="convertedDate"> {{ convertedDate }}</p>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        dateInput: "",
+        convertedDate: ""
+      },
+      methods: {
+        convertDate() {
+          const jsDate = new Date(this.dateInput); 
+          const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+          this.convertedDate = jsDate.toLocaleDateString('en-US', options);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
